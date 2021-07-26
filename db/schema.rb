@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_13_035841) do
+ActiveRecord::Schema.define(version: 2021_02_23_203515) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,6 +66,13 @@ ActiveRecord::Schema.define(version: 2021_02_13_035841) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "friendships", force: :cascade do |t|
+    t.integer "follower_id"
+    t.integer "followee_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "genres", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -103,6 +110,19 @@ ActiveRecord::Schema.define(version: 2021_02_13_035841) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "movies", force: :cascade do |t|
+    t.string "title"
+    t.integer "runtime"
+    t.string "image"
+    t.string "genre"
+    t.string "tagline"
+    t.integer "release_year"
+    t.text "overview"
+    t.integer "rating"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "playlist_tracks", force: :cascade do |t|
     t.bigint "playlist_id"
     t.bigint "track_id"
@@ -116,6 +136,16 @@ ActiveRecord::Schema.define(version: 2021_02_13_035841) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "movie_id"
+    t.text "content"
+    t.integer "personal_rating"
+    t.integer "likes"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "tracks", force: :cascade do |t|
@@ -132,6 +162,15 @@ ActiveRecord::Schema.define(version: 2021_02_13_035841) do
     t.index ["album_id"], name: "index_tracks_on_album_id"
     t.index ["genre_id"], name: "index_tracks_on_genre_id"
     t.index ["media_type_id"], name: "index_tracks_on_media_type_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
+    t.string "avatar"
+    t.string "email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "albums", "artists"
