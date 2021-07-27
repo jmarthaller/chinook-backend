@@ -13,12 +13,10 @@ Here is the [entity relationship diagram](https://dbdiagram.io/d/5daf54c802e6e93
 ## Database
 The repo runs on Postgresql. However, since Ruby on Rails handles importing data through `seeds.rb`, you should be able to run this repo any Ruby on Rails supported database. See `app/config/database.yml` for Rails database setup.
 
-## Getting Started
-
-Install Postgresql on your machine.
+## Run this app locally
 
 Clone the chinook repository:
-`git clone https://github.com/nikita-kazakov/chinook`
+`git clone https://github.com/jmarthaller/chinook-backend.git` 
 
 Change terminal directory to chinook:
 `cd chinook`
