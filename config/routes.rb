@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   resources :employees
   resources :genres
   resources :invoices
+  resources :invoice_lines
   resources :playlists
   resources :tracks
+  resources :users
 end
