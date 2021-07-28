@@ -30,10 +30,4 @@ ActiveRecord::Schema.define(version: 2021_02_23_203515) do
 
 
   
-
-
-  # add_foreign_key "albums", "artists"
-
-  # add_foreign_key "tracks", "albums"
-
 end
