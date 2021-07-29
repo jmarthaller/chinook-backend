@@ -1,2 +1,0 @@
-class MediaType < ApplicationRecord
-end
