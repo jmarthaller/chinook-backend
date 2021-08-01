@@ -1,8 +1,6 @@
 # Chinook Music Dataset in Ruby on Rails
 
-## What is it?
-Chinook is an open-source sample database that represents a digital media store. It's for use in demos or for learning how to use a specific web framework without needing to make data up. 
-
+Designed to run as the CRUD backend to (React frontend)[https://github.com/jmarthaller/chinook-frontend]
 
 ## Versions
 - Ruby on Rails 5.2
