@@ -1,6 +1,6 @@
 # Chinook Music Dataset in Ruby on Rails
 
-Designed to run as the CRUD backend to (React frontend)[https://github.com/jmarthaller/chinook-frontend]
+Designed to run as the CRUD backend to [React frontend](https://github.com/jmarthaller/chinook-frontend)
 
 ## Versions
 - Ruby on Rails 5.2
