@@ -15,6 +15,12 @@ class AlbumsController < ApplicationController
         render json: @album
     end
 
+    def update
+        @album = Album.find(params[:id]) 
+        @album.update(album_params)
+        render json: @album
+    end
+
     def destroy
         @album = Album.find(params[:id]) 
         @album.destroy
